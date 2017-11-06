@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Bart",
+    "votes": 0,
+    "vetoed": false
+  },
+  {
+    "id": 2,
+    "name": "Lili",
+    "votes": 0,
+    "vetoed": false
+  },
+  {
+    "id": 3,
+    "name": "Ray",
+    "votes": 0,
+    "vetoed": false
+  },
+  {
+    "id": 4,
+    "name": "Venus",
+    "votes": 0,
+    "vetoed": false
+  },
+  {
+    "id": 5,
+    "name": "Biff",
+    "votes": 0,
+    "vetoed": false
+  }
+]
