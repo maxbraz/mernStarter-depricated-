@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Search from './components/Search.jsx';
 import List from './components/List.jsx';
 import testData from '../../data.json';
 
@@ -11,31 +10,31 @@ class App extends React.Component {
     this.state = {
       items: testData
     }
-    this.fetch = this.fetch.bind(this);
-    this.search = this.search.bind(this);
+    this.fetchItems = this.fetchItems.bind(this);
+    this.addItem = this.addItem.bind(this);
   }
 
-  search(item) {
-    let coordinates;
+  addItem(item) {
+    let items;
     axios.post('/item', {
       item: item
     })
     .then(function(response) {
-      coordinates = response.data;
+      items = response.data;
     })
     .catch(function(error) {
       console.log(error);
     })
 
-    this.fetch(coordinates);
+    this.fetch(items);
   }
 
-  fetch(coordinates) {
+  fetch(items) {
     let fetchedItems;
 
     axios.get('/items', {
       params: {
-        coordinates: coordinates
+        items: items
       }
     })
     .then(function (response) {
@@ -49,8 +48,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Item Search</h1>
-      <Search onSearch={this.search}/>
+      <h1>Item List</h1>
       <List items={this.state.items}/>
     </div>)
   }
