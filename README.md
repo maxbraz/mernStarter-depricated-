@@ -1,12 +1,10 @@
-# mernStarter
-boilerplate MERN stack list
-
+# breadware todo list coding challenge
 # my own boilerplate mern repo was used to start this project.  Original code can be found here: https://github.com/maxbraz/mernStarter
 
 # To get this setup and running locally please follow the instructions below from the terminal:
 
 # clone the repo to your local machine
-$ git clone <repo link>
+$ git clone https://github.com/maxbraz/breadwareTodoList.git
 
 # enter the directory
 $ cd breadwareTodoList

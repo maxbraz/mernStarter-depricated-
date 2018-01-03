@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const ListItem = ({item}) => (
+const Todo = ({todo}) => (
   <li>
-    {`${item.name}`}
+    {`${todo.todo}`}
   </li>
 )
 
-export default ListItem;
+export default Todo;

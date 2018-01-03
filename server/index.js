@@ -1,17 +1,16 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const Item = require('../db/index.js');
+const Todo = require('../db/index.js');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './../client/dist')));
 
 app.post('/item', (req, res) => {
-  let item = new Item({
+  let todo = new Todo({
     'name': req.body.name,
-    'votes': req.body.votes,
-    'vetoed': false,
+    'completed': false,
   });
 
   res.send(JSON.stringify('Successful Post!'));
@@ -19,7 +18,7 @@ app.post('/item', (req, res) => {
 
 app.get('/items', (req, res) => {
 
-  Item.find({}).limit(5).exec( (err, items) => {
+  Todo.find({}).limit(5).exec( (err, items) => {
     if (err) {
       console.log( 'server get failure', err);
     } else {
@@ -31,5 +30,5 @@ app.get('/items', (req, res) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, function() {
-  console.log(`MERN Starter listening on ${port}`);
+  console.log(`todo list listening on ${port}`);
 });

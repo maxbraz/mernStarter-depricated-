@@ -1,13 +1,12 @@
-let Item = require('./db/index.js');
-let items = require('./data.json');
+let Todo = require('./db/index.js');
+let todos = require('./data.json');
 
-for (let item of items) {
-  let itemo = new item({
-    name: item.name,
-    votes: item.votes,
-    vetoed: item.vetoed,
+for (let todo of todos) {
+  let todoo = new Todo({
+    todo: todo.todo,
+    completed: todo.completed,
   });
-  itemo.save((err) => {
+  todoo.save((err) => {
     if (err) {
       console.log(err);
     } else {

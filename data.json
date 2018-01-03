@@ -1,32 +1,22 @@
 [
   {
-    "id": 1,
-    "name": "Bart",
-    "votes": 0,
-    "vetoed": false
+    "todo": "Setup dev environment",
+    "completed": false
   },
   {
-    "id": 2,
-    "name": "Lili",
-    "votes": 0,
-    "vetoed": false
+    "todo": "Create tests",
+    "completed": false
   },
   {
-    "id": 3,
-    "name": "Ray",
-    "votes": 0,
-    "vetoed": false
+    "todo": "Deploy to AWS",
+    "completed": false
   },
   {
-    "id": 4,
-    "name": "Venus",
-    "votes": 0,
-    "vetoed": false
+    "todo": "Fix bugs",
+    "completed": false
   },
   {
-    "id": 5,
-    "name": "Biff",
-    "votes": 0,
-    "vetoed": false
+    "todo": "Add C.I.",
+    "completed": false
   }
 ]
