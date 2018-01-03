@@ -29,7 +29,7 @@ class App extends React.Component {
     this.fetch(items);
   }
 
-  fetch(items) {
+  fetchItems(items) {
     let fetchedItems;
 
     axios.get('/items', {
