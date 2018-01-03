@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const ListItem = ({item}) => (
   <li>
-    {`${item}`}
+    {`${item.name}`}
   </li>
 )
 
