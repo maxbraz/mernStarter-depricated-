@@ -1,16 +1,27 @@
 # mernStarter
 boilerplate MERN stack list
 
-git clone the repo to your local machine
+# my own boilerplate mern repo was used to start this project.  Original code can be found here: https://github.com/maxbraz/mernStarter
 
-cd into the repo directory
+# To get this setup and running locally please follow the instructions below from the terminal:
 
-npm install
+# clone the repo to your local machine
+$ git clone <repo link>
 
-npm run react-dev
+# enter the directory
+$ cd breadwareTodoList
 
-npm run server-dev
+# install dependencies
+$ npm install
 
-npm run db-start
+# build the bundle.js with webpack
+$ npm run react-dev
 
-open a browser to localhost:5000
+# start the node/express server
+$ npm run server-dev
+
+# connect to the mongodb
+$ npm run db-start
+
+# view the web app in your preferred browser
+$ type localhost:5000 into your address bar
