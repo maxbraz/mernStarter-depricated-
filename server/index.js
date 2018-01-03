@@ -1,8 +1,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const parser = require('parse-address');
-const zipcodes = require('zipcodes');
 const Item = require('../db/index.js');
 
 const app = express();
@@ -10,18 +8,22 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './../client/dist')));
 
 app.post('/item', (req, res) => {
-  // post to db
-  res.send(JSON.stringify('Successful Post'));
+  let item = new Item({
+    'name': req.body.name,
+    'votes': req.body.votes,
+    'vetoed': false,
+  });
+
+  res.send(JSON.stringify('Successful Post!'));
 });
 
 app.get('/items', (req, res) => {
-  // get from db
 
   Item.find({}).limit(5).exec( (err, items) => {
     if (err) {
-      console.log( 'server get request failure', err);
+      console.log( 'server get failure', err);
     } else {
-      console.log('Success!');
+      console.log('Successful Get!');
     }
     res.end(JSON.stringify(items));
   });
